@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1b2a35;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(21,32,43);
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    header .auth-buttons {
+        display: flex;
+    }
+
+    header .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    header .auth-buttons button:nth-of-type(2) {
+        background-color: #e3f1e3;
+        color: #04aa6d;
+    }
+
+    header .auth-buttons button:hover {
+        opacity: 0.9;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        background-color: #282A35;
+        color: white;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background-color: black;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #282A35;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: rgb(21,32,43);
+        height: 240vh;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        margin-top: 148px;
+    }
+
+    .sidebar h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar ul li {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .sidebar ul li a:hover, .sidebar ul li a.active {
+        color: #04aa6d;
+    }
+
+    .main-content, .basic-concepts {
+        margin-left: 270px;
+        padding: 20px;
+        flex-grow: 1;
+        margin-top: 20px; 
+    }
+
+    .main-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content h2, .basic-concepts h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content p, .basic-concepts p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .navigation-buttons a {
+        background-color: #04aa6d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navigation-buttons a:hover {
+        background-color: #039e62;
+    }
+
+    hr {
+        margin-left: 300px;
+        margin-right: 70px;
+        opacity: 0.3;
+    }
+
+    footer {
+        background-color: rgb(21,32,43);
+        color: white;
+        padding: 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        margin-left: 270px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cc {
+        text-align: left;
+    }
+
+    .social-icons {
+        text-align: right;
+    }
+
+    .social-icons i {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #04aa6d;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="lg.png" alt="Logo">
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'">Sign in</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="module.html">C#</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Modules</h2>
+            <ul>
+                <li><a href="module.html">C# Introduction</a></li>
+                <li><a href="bc.html">Basic Concepts</a></li>
+                <li><a href="cl.html">Conditionals and Loops</a></li>
+                <li><a href="m.html" class="active">Methods</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Methods</h1>
+            <div class="navigation-buttons">
+                <a href="cl.html" class="previous"><i class="fas fa-arrow-left"></i> previous</a>
+                <a href="home.html" class="next">Back home <i class="fas fa-arrow-right"></i></a>
+            </div>
+                <h2>What is Method?</h2>
+                <p>A collection of programming statements grouped together to perform a particular operation or task.</p>
+                <p>They can be predefined by C#, or built to personal detail by a programmer.</p>
+        </div>
+        
+        <hr>
+        
+        <div class="basic-concepts">
+            <h2>Method Parameters</h2>
+            <div>
+            <p>Also known as <strong>arguments.</strong></p>
+            <p>These are variables that accept the values passed into the method when the method is called.</p> <br>
+
+            <h2>Multiple Parameters</h2>
+            <p>Methods can have more than one(1) parameter.</p>
+            <p>Multiple parameters allow for multiple operations, values, and control structures, increasing method versatility.</p> <br>
+
+            <h2>Optional arguments</h2>
+            <p>Methods usually have a default value specified as optional parameters</p>
+            <p>This is done by calling the method with a different set of parameter values.</p> <br>
+
+            <h2>Named arguments</h2>
+            <p>Allows programmers to be free from the need to remember the order of parameters in a call statement for a method.</p>
+            <p>Each argument can be specified by the matching parameter name.</p> <br>
+
+            <h2>Passing arguments</h2>
+            <p>By value – Involves copying the argument’s value into the method’s formal parameter. Changes can be made to the parameter within the method without having any effect on the argument itself.</p>
+            <p>By reference – Involves copying an argument’s memory address into the formal parameter; this is usually done via the ref keyword in both the method definition and any method call.</p>
+            <p>By output – Operates similarly to argument passing by value, except it transfers data out of the method instead of accepting data in; this is facilitated via the out keyword.</p> <br>
+
+            <h2>Method Overloading</h2>
+            <p>Allows parameters to use other data types for different instances of the same method.</p>
+            <p>Data types of a parameter in a particular method will only accept values corresponding to the specified data type.</p><br>
+
+            <h2>Recursion</h2>
+            <p>It is the repeated application of a procedure or definition that reduces it to a smaller, simpler version of itself.</p>
+            <p>The procedure itself is recursive; it applies or executes the procedure upon itself and/or any of its given values until the procedure can no longer be applied due to being reduced to its simplest state.</p><br>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="cc">
+                <h3>Contact</h3>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-solid fa-envelope"></i> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

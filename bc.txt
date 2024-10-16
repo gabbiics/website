@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1b2a35;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(21,32,43);
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    header .auth-buttons {
+        display: flex;
+    }
+
+    header .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    header .auth-buttons button:nth-of-type(2) {
+        background-color: #e3f1e3;
+        color: #04aa6d;
+    }
+
+    header .auth-buttons button:hover {
+        opacity: 0.9;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        background-color: #282A35;
+        color: white;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background-color: black;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #282A35;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: rgb(21,32,43);
+        height: 225vh;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        margin-top: 148px;
+    }
+
+    .sidebar h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar ul li {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .sidebar ul li a:hover, .sidebar ul li a.active {
+        color: #04aa6d;
+    }
+
+    .main-content, .basic-concepts {
+        margin-left: 270px;
+        padding: 20px;
+        flex-grow: 1;
+        margin-top: 20px; 
+    }
+
+    .main-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content h2, .basic-concepts h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content p, .basic-concepts p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .navigation-buttons a {
+        background-color: #04aa6d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navigation-buttons a:hover {
+        background-color: #039e62;
+    }
+
+    hr {
+        margin-left: 300px;
+        margin-right: 70px;
+        opacity: 0.3;
+    }
+
+    .cv ul {
+        padding-left: 15px; 
+        color: white; 
+    }
+
+    .cv ul li {
+        margin-bottom: 10px; 
+        color: white;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 18px;
+        color: white;
+    }
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #04aa6d;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #1b2a35;
+    }
+
+    table tr:hover {
+        background-color: #555;
+    }
+
+    table td {
+        color: white;
+    }
+
+    footer {
+        background-color: rgb(21,32,43);
+        color: white;
+        padding: 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        margin-left: 270px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cc {
+        text-align: left;
+    }
+
+    .social-icons {
+        text-align: right;
+    }
+
+    .social-icons i {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #04aa6d;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="lg.png" alt="Logo">
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'">Sign in</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="module.html">C#</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Modules</h2>
+            <ul>
+                <li><a href="module.html">C# Introduction</a></li>
+                <li><a href="bc.html" class="active">Basic Concepts</a></li>
+                <li><a href="cl.html">Conditionals and Loops</a></li>
+                <li><a href="m.html">Methods</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>C# Basic Concepts</h1>
+            <div class="navigation-buttons">
+                <a href="module.html" class="previous"><i class="fas fa-arrow-left"></i> previous</a>
+                <a href="cl.html" class="next">Next <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="cv">
+                <h2>C# Variables</h2>
+                <p>Variables are containers for storing data values.</p>
+                <p>In C#, there are different types of variables (defined with different keywords), for example:</p>
+                <ul>
+                    <li><strong>int</strong>- stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                    <li><strong>double</strong>- stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                    <li><strong>char</strong>-  stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                    <li><strong>string</strong>- stores text, such as "Hello World". String values are surrounded by double quotes</li>
+                    <li><strong>bool</strong>- stores values with two states: true or false</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr>
+
+        <div class="basic-concepts">
+            <h2>Printing Text</h2>
+            <div>
+                <p>Text (such as those found instring values) can be displayed on the console window via the <strong>Console.Write() or Console.WriteLine()</strong> methods.</p>
+                <p><strong>Console.Write()</strong>will continue to print text in the same line so long as the method is continuously called.</p> 
+                <p><strong>Console.WriteLine()</strong>ends its printed text with a line terminator, which moves the cursor to the next line; similar subsequent methods will print their text in their own respective lines.</p><br>
+
+            <h2>Getting User input</h2>
+            <p>Users can be prompted to enter data using the Console.ReadLine() method.</p>
+            <p>Entered input is assigned to a string variable.</p>
+            <p>Input values can be converted into other data types using the Convert.ToXXX method (where XXX is the .NET name of the data type that the value will be converted into).</p>
+            <p><strong>Convert.ToDouble</strong>  will convert the string input into double data type values.</p>
+            <p><strong>Convert.ToBoolean</strong>  will convert input into Boolean values.</p>
+            <p><strong>Convert.ToInt16, Convert.ToInt32 and Convert.ToInt64</strong> converts input to integer values based on specified bit size of the integer (16-bit, 32-bit, and 64-bit, respectively).</p> <br>
+
+            <h2>Basic Operators</h2>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Symbol</th>
+            <th>Form</th>
+        </tr>
+        <tr>
+            <td>Addition</td>
+            <td>+</td>
+            <td>x + y</td>
+        </tr>
+        <tr>
+            <td>Subtraction</td>
+            <td>-</td>
+            <td>x - y</td>
+        </tr>
+        <tr>
+            <td>Multiplication</td>
+            <td>*</td>
+            <td>x * y</td>
+        </tr>
+        <tr>
+            <td>Division</td>
+            <td>/</td>
+            <td>x / y</td>
+        </tr>
+        <tr>
+            <td>Modulus</td>
+            <td>%</td>
+            <td>x % y</td>
+        </tr>
+    </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="cc">
+                <h3>Contact</h3>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-solid fa-envelope"></i> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1b2a35;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(21,32,43);
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    header .auth-buttons {
+        display: flex;
+    }
+
+    header .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    header .auth-buttons button:nth-of-type(2) {
+        background-color: #e3f1e3;
+        color: #04aa6d;
+    }
+
+    header .auth-buttons button:hover {
+        opacity: 0.9;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        background-color: #282A35;
+        color: white;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background-color: black;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home h1 {
+        font-size: 5em;
+        margin-bottom: 10px;
+        color: white;  
+    }
+
+    #home h4 {
+        font-size: 1.3em;
+        color: #fff4a3;  
+    }
+
+    hr {
+        margin-left: 10px;
+        margin-right: 10px;
+        opacity: 0.3;
+    }
+
+    .introduction-csharp {
+        margin-left: 10px;
+        padding: 20px;
+        flex-grow: 1;
+        margin-top: 20px; 
+    }
+
+    .introduction-csharp h1 {
+        font-size: 48px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .introduction-csharp h4 {
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .introduction-csharp p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    footer {
+        background-color: rgb(21,32,43);
+        color: white;
+        padding: 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        margin-left: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cc {
+        text-align: left;
+    }
+
+    .social-icons {
+        text-align: right;
+    }
+
+    .social-icons i {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #04aa6d;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="lg.png" alt="Logo">
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'">Sign in</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="module.html">C#</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+<!-- about us -->
+    <section id="home" class="content">
+        <h1>Code Learn</h1> 
+        <h4>Code Learn is a website learning school for students who wants to learn C#</h4>
+    <h4>Be Future Ready, Be Code Learn Learner.</h4>
+    </section>
+        
+        <div class="introduction-csharp">
+            <h1>What is Code Learn?</h1>
+            <div>
+                <p>We create simplified learning experiences.</p>
+                <p>Learning Web Development should be easy to understand for everyone!</p> <br>
+            
+            <hr>
+            
+            <h1>Easy Learning</h1>
+            <div>
+            <p>Code Learn practice easy learning.</p>
+            <p>Code Learn has focus on simplicity.</p>
+            
+            <hr>
+
+            <h1>Code Learn is Free</h1>
+                <p>Code Learn is free and accessible for everyone.</p>
+            
+            <hr>
+            
+            <h1>Chat GPT</h1>
+            <h4>This how Chat GPT describes Code Learn</h4>
+                <p>"Code Learn is an interactive, user-friendly platform designed to teach the fundamentals of programming, focusing on languages like C#. With a clean and organized interface, it offers easy navigation through various modules, from basic concepts to advanced topics like conditionals, loops, methods, and object-oriented programming. Code Learn also features practical examples, clear explanations, and visual tutorials to help users grasp key coding principles effectively. Whether you're a beginner or looking to strengthen your coding skills, Code Learn provides a comprehensive learning experience, complete with coding exercises and real-world applications."</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="cc">
+                <h3>Contact</h3>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-solid fa-envelope"></i> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

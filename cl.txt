@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Learn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1b2a35;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(21,32,43);
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    header .auth-buttons {
+        display: flex;
+    }
+
+    header .auth-buttons button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    header .auth-buttons button:nth-of-type(2) {
+        background-color: #e3f1e3;
+        color: #04aa6d;
+    }
+
+    header .auth-buttons button:hover {
+        opacity: 0.9;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        background-color: #282A35;
+        color: white;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background-color: black;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #282A35;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: rgb(21,32,43);
+        height: 185vh;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        margin-top: 148px;
+    }
+
+    .sidebar h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+    }
+
+    .sidebar ul li {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .sidebar ul li a:hover, .sidebar ul li a.active {
+        color: #04aa6d;
+    }
+
+    .main-content, .basic-concepts {
+        margin-left: 270px;
+        padding: 20px;
+        flex-grow: 1;
+        margin-top: 20px; 
+    }
+
+    .main-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content h2, .basic-concepts h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .main-content p, .basic-concepts p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .navigation-buttons a {
+        background-color: #04aa6d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navigation-buttons a:hover {
+        background-color: #039e62;
+    }
+
+    hr {
+        margin-left: 300px;
+        margin-right: 70px;
+        opacity: 0.3;
+    }
+
+    .cv ul {
+        padding-left: 15px; 
+        color: white; 
+    }
+
+    .cv ul li {
+        margin-bottom: 10px; 
+        color: white; 
+    }
+
+    footer {
+        background-color: rgb(21,32,43);
+        color: white;
+        padding: 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        margin-left: 270px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cc {
+        text-align: left;
+    }
+
+    .social-icons {
+        text-align: right;
+    }
+
+    .social-icons i {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons i:hover {
+        color: #04aa6d;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="lg.png" alt="Logo">
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'">Sign in</button>
+            <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="module.html">C#</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Modules</h2>
+            <ul>
+                <li><a href="module.html">C# Introduction</a></li>
+                <li><a href="bc.html">Basic Concepts</a></li>
+                <li><a href="cl.html" class="active">Conditionals and Loops</a></li>
+                <li><a href="m.html">Methods</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Conditionals and Loops</h1>
+            <div class="navigation-buttons">
+                <a href="bc.html" class="previous"><i class="fas fa-arrow-left"></i> previous</a>
+                <a href="m.html" class="next">Next <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="cv">
+                <h2>C# Conditions and if else statements</h2>
+                <p>A conditional statement that executes a block of code when a condition returns a Boolean value of true.</p>
+                <p>Can have conditions of any expression, so long as it returns Boolean values (true or false).</p>
+                <p>C# supports the usual logical conditions from mathematics:</p>
+                <ul>
+                    <li>Less than: a < b</li>
+                    <li>Less than or equal to: a <= b</li>
+                    <li>Greater than: a > b</li>
+                    <li>Greater than or equal to: a >= b</li>
+                    <li>Equal to a == b</li>
+                    <li>Not Equal to: a != b</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="basic-concepts">
+            <h2>The else Clause</h2>
+            <div>
+            <p>A clause that can be used for the for the if statement</p>
+            <p>Can be specified to execute a block of code when the condition in the if block returns a false value.</p> <br>
+
+            <h2>Nested if-else Statements</h2>
+            <p>These are if-else statements within another if-else statement.</p>
+            <p>Programmers can nest an infinite amount of if-else statements.</p> <br>
+
+            <h2>if-else Statements</h2>
+            <p>A compound conditional statement that can be used to help a program to decide among three (3) or more actions.</p>
+            <p>An if statement can have zero (0) or more else-if's clauses and they must come before the last else clause, which is optional.</p> 
+            <p>Once an else-if clause succeeds, none of the remaining else-if's or else clauses will be tested.</p><br>
+
+            <h2>While loop</h2>
+            <p>Repeatedly executes a block of code as long as a given condition is satisfied</p>
+            <h2>For loop</h2>
+            <p>A type of loop that executes a statement for a specific number of times.</p>
+            <h2>Do-while loop</h2>
+            <p>A loop structure that is fundamentally similar to the while loop</p><br>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="cc">
+                <h3>Contact</h3>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-solid fa-envelope"></i> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
